@@ -14,14 +14,4 @@ describe('verify the radio button , checkbox , dropdown', function(){
       cy.get('input[value="blue"]').should('not.be.checked')
     })
 
-    it('verify the checkbox button',function(){
-      
-        
-    })
-
-    it('verify the dropdown button',function(){
-
-        
-    })
-
 })

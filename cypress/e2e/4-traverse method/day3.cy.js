@@ -17,7 +17,6 @@ describe('traverse methods',function(){
     it('To get all sibling DOM elements of elements, use the .siblings() command.',function(){
        cy.get('#coffee').siblings().should('have.length',4)
     })
-    // children() , first() , last() , eq() , prev() , next() , nextAll() , prevAll() , sibling()
     it('To get DOM elements that match a specific selector, use the .filter() command.',function(){
        cy.get('.traversal-button-states').children().filter('.disabled').should('have.text',"Warning")
     })

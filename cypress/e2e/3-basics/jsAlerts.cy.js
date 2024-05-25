@@ -1,10 +1,4 @@
 
-
-// js alert , we cannot inspect
-//window.alert()
-//window.confirm()
-//window.prompt()
-
 /// <reference types="cypress" />
 
 describe('manage js alert',function(){

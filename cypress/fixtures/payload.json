@@ -1,0 +1,17 @@
+{
+    "post":
+        {
+            "name": "kartiki kode",
+            "gender": "female",
+            "email": "",
+            "status": "active"
+        },
+    "put":
+        {
+            "name": "kartiki kode",
+            "email": "",
+            "status": "active"
+        }
+     
+    
+}

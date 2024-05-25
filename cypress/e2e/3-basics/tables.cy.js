@@ -18,7 +18,6 @@ describe('tables in cypress', function () {
         let sum = 0
         cy.visit('https://webdriveruniversity.com/Data-Table/index.html')
         cy.get('#t01').find('tr').each(function (row) {
-            //cy.log(row.find('td').last().text())
             sum = sum + Number(row.find('td').last().text())
         })
             .then(function () {
@@ -32,7 +31,6 @@ describe('tables in cypress', function () {
         let sum = 0
         cy.visit('https://webdriveruniversity.com/Data-Table/index.html')
         cy.get('#t02').find('tr').each(function (row) {
-            //cy.log(row.find('td').last().text())
             sum = sum + Number(row.find('td').last().text())
         })
             .then(function () {

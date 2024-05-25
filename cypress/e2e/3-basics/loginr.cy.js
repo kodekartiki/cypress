@@ -22,9 +22,4 @@ describe('verify the login',function(){
        cy.get('h3[data-test="error"]').should('be.visible')
    })
    
-   
-   
-   
-   
-   
    })

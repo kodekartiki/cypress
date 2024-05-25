@@ -1,7 +1,7 @@
 
 /// <reference types="cypress" />
 
-// test scenario - 1
+// test senario - 1
 describe('validate the login functionality',function(){
 
     //test case - 1
@@ -19,17 +19,7 @@ describe('validate the login functionality',function(){
            
           //assertions
           cy.get('.app_logo').should('be.visible')
-  
-          
-  
-  
-  
-  
-         
-  
-  
-  
-  
+
      })
   
      //test case -2

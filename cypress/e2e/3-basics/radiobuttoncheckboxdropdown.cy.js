@@ -6,16 +6,6 @@ describe('verify the radio button', function () {
     })
 
     it('verify the radio button', function () {
-
-        //click()
-        // cy.get('input[value="green"]').click()
-        // cy.get('input[value="green"]').should('be.checked')
-        // cy.get('input[value="blue"]').should('not.be.checked')
-
-        // cy.get('input[value="green"]').as('greenRadio')
-        // cy.get('@greenRadio"]').check()
-        // cy.get('@greenRadio"]').should('be.checked')
-
         cy.get('#radio-buttons').children().filter('input[type="radio"]').each(function (el) {
             cy.wrap(el).check()
             cy.wrap(el).should('be.checked')
@@ -50,9 +40,6 @@ describe('verify the radio button', function () {
     })
 
     it('selecting the dropdown - one',function(){
-        // text
-        //cy.get('#dropdowm-menu-1').select('Python')
-        // value attribute
         cy.get('#dropdowm-menu-1').select('python')
 
     })
@@ -70,17 +57,5 @@ describe('verify the radio button', function () {
         cy.get('input[value = "lettuce"]').should('not.be.disabled')
         cy.get('input[value = "pumpkin"]').should('be.checked')
     })
-
-
-
-
-
-
-
-
-
-
-
-
 
 })

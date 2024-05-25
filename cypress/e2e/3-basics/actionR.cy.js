@@ -12,14 +12,12 @@ describe('mouse actions ',function(){
 
     it('Double click',function(){
         cy.visit('https://webdriveruniversity.com/Actions/index.html')
-        //cy.get('#double-click').trigger('dblclick').should('have.class','double')
         cy.get('#double-click').dblclick().should('have.class','double')
     })
 
     it('Right click',function(){
         cy.visit('https://swisnl.github.io/jQuery-contextMenu/demo.html')
         cy.get('.context-menu-one').first().rightclick()
-        //cy.get('.context-menu-one').first().trigger('contextmenu')
         cy.get('body > ul > li.context-menu-item.context-menu-icon.context-menu-icon-cut > span').should('be.visible')
     })
 
@@ -49,7 +47,6 @@ describe('mouse actions ',function(){
         cy.visit('https://webdriveruniversity.com/Autocomplete-TextField/autocomplete-textfield.html')
         cy.get('#myInput').type('B')
         cy.get('#myInputautocomplete-list').children().each(function(el){
-            //cy.log(el.text())
             if(el.text().includes('Bacon')){
                 cy.wrap(el).click();
             }
@@ -58,10 +55,4 @@ describe('mouse actions ',function(){
         cy.get('#submit-button').click()
         cy.url().should('contain',"Bacon")
     })
-
-  
-
-    
-
-
 })

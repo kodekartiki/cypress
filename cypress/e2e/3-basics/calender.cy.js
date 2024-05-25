@@ -7,28 +7,23 @@ describe('manage date picker cypress using js', function () {
         let date = new Date()
         date.setDate(date.getDate() + 400)
 
-        cy.log(date.getFullYear()) // 2025
-        //cy.log(date.getMonth())
+        cy.log(date.getFullYear()) 
         cy.log(date.getDate())
         cy.log(date.toLocaleString("default", { month: "long" }))
-        let year = date.getFullYear() // 2025
-        let month = date.toLocaleString("default", { month: "long" }) // May
-        let dayDate = date.getDate() // 17
+        let year = date.getFullYear() 
+        let month = date.toLocaleString("default", { month: "long" })
+        let dayDate = date.getDate() 
         cy.get('#datepicker').click()
         function selectMonthYear() {
 
-            // year selection
-            cy.get('.datepicker-switch').first().then(function (currentDate) {
-                //cy.log(currentDate.text())
+            cy.get('.datepicker-switch').first().then(function (currentDate) { 
                 if (!currentDate.text().includes(year)) {
                     cy.get('.next').first().click()
                     selectMonthYear();
                 }
 
             }).then(function () {
-                // month selection
                 cy.get('.datepicker-switch').first().then(function (currentDate) {
-                    //cy.log(currentDate.text())
                     if (!currentDate.text().includes(month)) {
                         cy.get('.next').first().click()
                         selectMonthYear();
