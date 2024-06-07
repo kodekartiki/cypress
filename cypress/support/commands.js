@@ -39,3 +39,11 @@ Cypress.Commands.add('formDetails',(fn,ln,em,msg) => {
     return cy.get(`#${id}`)
     .its('0.contentDocument.body').should('not.be.empty').then(cy.wrap)
  })
+
+
+ Cypress.Commands.add('parseXlsx', (inputFile) => {
+   return cy.task('parseXlsx' , { filePath: inputFile})
+})
+
+
+
