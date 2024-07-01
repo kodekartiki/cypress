@@ -20,7 +20,6 @@ describe('verify the assertions ',function(){
 
 
      it('loop through elements',function(){
-         
         let expectedArray = ["Coffee","Tea","Milk","Espresso","Sugar"]
        cy.get('.traversal-drinks-list').children().each(function(el,index){
            
