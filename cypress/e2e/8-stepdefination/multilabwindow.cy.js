@@ -33,20 +33,5 @@ describe('verify multitab and multi window in cypress', function () {
         cy.get('[id="openwindow"]').click()
         cy.url().should('contain', '/courses')
     })
-
-    it('verify muti window property in cypress-rohitshetty', function () {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
-
-        cy.window().then((win) => {
-            cy.stub(win, 'open').callsFake((url) => {
-                win.location.href = url
-            })
-        })
-
-        cy.get('[id="openwindow"]').click()
-        cy.url().should('contain', 'qaclickacademy')
-
-
-    })
-
+    
 })
